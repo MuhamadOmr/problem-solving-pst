@@ -1,5 +1,8 @@
 #include <string>
 #include <cmath>
+#include <vector>
+#include <iostream>
+
 using namespace std;
 
 bool isPerfectSquare(double x)
@@ -32,4 +35,12 @@ void loopString()
     {
         charCount[inputString[i] - 'a'] += 1;
     }
+}
+
+// loop vector
+void loopVector()
+{
+    vector<int> days;
+    for (auto i = days.begin(); i != days.end(); ++i)
+        cout << *i << ' ';
 }

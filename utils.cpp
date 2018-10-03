@@ -1,6 +1,7 @@
 #include <string>
 #include <cmath>
 #include <vector>
+#include <array>
 #include <iostream>
 
 using namespace std;
@@ -43,4 +44,16 @@ void loopVector()
     vector<int> days;
     for (auto i = days.begin(); i != days.end(); ++i)
         cout << *i << ' ';
+}
+
+// loop array
+void loopArray()
+{
+    array<int, 5> v;
+    for (std::size_t i = 0; i != v.size(); ++i)
+    {
+        // access element as v[i]
+
+        // any code including continue, break, return
+    }
 }

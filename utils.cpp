@@ -57,3 +57,23 @@ void loopArray()
         // any code including continue, break, return
     }
 }
+
+void defineAndUseArrayOfChars()
+{
+    char roadString[5];
+
+    scanf("%s", roadString);
+}
+
+// read empty lines empty string read array of chars => used in parenthesee balance problem
+void readEmptyLinesInCharsArray()
+{
+
+    char rawChars[129];
+    int numOfLines = 0;
+    scanf("%d", &numOfLines);
+    // https://stackoverflow.com/questions/25597732/read-empty-lines-c
+    // you have to read it twice
+    cin.getline(rawChars, 129); // reads the rest of the line that the number was on
+    cin.getline(rawChars, 129); // reads the blank line
+}

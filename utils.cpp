@@ -1,5 +1,7 @@
 #include <string>
 #include <cmath>
+#include <iostream>
+#include <iterator>
 #include <vector>
 #include <array>
 #include <iostream>
@@ -76,4 +78,33 @@ void readEmptyLinesInCharsArray()
     // you have to read it twice
     cin.getline(rawChars, 129); // reads the rest of the line that the number was on
     cin.getline(rawChars, 129); // reads the blank line
+}
+
+
+// multiple way to seperate any iterators
+
+//example : 1, 2, 3, 4, 5
+void sepAnyIterator()
+{
+
+    // way 1
+    vector<int> discarded;
+    auto it = discarded.begin();
+
+    if (it != discarded.end())
+    {
+        std::cout << *it;
+        ++it;
+    }
+
+    for (; it != discarded.end(); ++it)
+    {
+        cout << ", " << *it;
+    }
+
+    // way 2
+    array<int, 3> data = {1, 2, 3};
+    ostream_iterator<int> out(cout, ", ");
+    copy(data.begin(), data.end(), out);
+    cout << '\n';
 }

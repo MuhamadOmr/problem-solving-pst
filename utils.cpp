@@ -80,7 +80,6 @@ void readEmptyLinesInCharsArray()
     cin.getline(rawChars, 129); // reads the blank line
 }
 
-
 // multiple way to seperate any iterators
 
 //example : 1, 2, 3, 4, 5
@@ -107,4 +106,39 @@ void sepAnyIterator()
     ostream_iterator<int> out(cout, ", ");
     copy(data.begin(), data.end(), out);
     cout << '\n';
+}
+
+// return actual string length from array of char or a string
+void StrLen(value)
+{
+    strlen(value);
+}
+
+// this finds all possible sorting of string  in algoritm lib
+void allPossibleSotring()
+{
+    next_permutation(sentence.begin(), sentence.end());
+}
+
+// find number of occurence to in a string
+void findNumOfOccurencesInString()
+{
+    string rawString;
+    string periodStr = "findme";
+    int cou = 0;
+    signed int foundIndex = 0;
+    // check if the period string repeated till the end of the rawstring
+
+    // find number of occurences in a string
+    while (foundIndex != string::npos)
+    {
+
+        foundIndex = rawString.find(periodStr, foundIndex);
+
+        if (foundIndex != string::npos)
+        {
+            foundIndex += periodStr.length();
+            cou++;
+        }
+    }
 }
